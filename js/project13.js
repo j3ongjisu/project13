@@ -25,7 +25,7 @@ $(function () {
   });
 
   $('.main_slide').slick({
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 5100,
     speed: 1000,
     pauseOnHover: false,
@@ -35,7 +35,8 @@ $(function () {
 
 
   $('.main_visual .arrows .left').on('click', function () {
-    $('.main_slide').slick('slickPrev')
+    $('.main_slide').slick('slickPrev');
+    console.log('000')
   });
   $('.main_visual .arrows .right').on('click', function () {
     $('.main_slide').slick('slickNext')
@@ -45,7 +46,37 @@ $(function () {
     e.preventDefault();
     const idx = $(this).index(); // 0,1,2
     $('.main_slide').slick('slickGoTo', idx);
-  })
+  });
+
+  $('.pro_slide').slick({
+    arrows: false,
+  });
+
+  $('.main_pro_slide .pro_arrows .left').on('click', function () {
+    $('.pro_slide').slick('slickPrev');
+    console.log('000')
+  });
+  $('.main_pro_slide .pro_arrows .right').on('click', function () {
+    $('.pro_slide').slick('slickNext')
+  });
 
 
+  $('.family_link span').on('click', function () {
+    $(this).toggleClass('on');
+    $(this).next().toggleClass('on');
+  });
+
+
+  //to_top
+  //to_top 스크롤 위로 올리기
+  $('.to_top').on('click', function () {
+    $('html, body').animate({ scrollTop: 0 }, 600)
+  });
+
+  // to_top 스크롤 숨겼다가 나타내기
+  $(window).on('scroll', function () {
+    let sct = $(window).scrollTop();
+    // sct > 1000 ? $('.to_top').fadeIn(1000) : $('.to_top').fadeOut();
+    sct > 400 ? $('.to_top').addClass('on') : $('.to_top').removeClass('on');
+  });
 })
