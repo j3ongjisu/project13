@@ -1294,14 +1294,14 @@
   }
 
   .main_premium .premium a {
-    padding: 15px 20px 13px 20px;
+    padding: 13px 20px 13px 25px;
     font-size: 14px;
     background: #444;
     color: #fff;
   }
 
   .main_premium .premium i {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .main_premium .premium a:hover {
@@ -1331,8 +1331,10 @@
   }
 
   .main_premium .business a {
-    padding: 15px 20px 13px 20px;
+    padding: 13px 20px 13px 25px;
     font-size: 14px;
+    font-weight: 600;
+    color: #444;
   }
 
   .main_premium .business a:hover {
@@ -1342,7 +1344,7 @@
 
   .main_premium .business i {
     margin: 0 0 0 3px;
-    font-size: 14px;
+    font-size: 12px;
   }
 
 
