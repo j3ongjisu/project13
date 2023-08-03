@@ -25,7 +25,7 @@ $(function () {
   });
 
   $('.main_slide').slick({
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 5100,
     speed: 1000,
     pauseOnHover: false,
@@ -48,6 +48,20 @@ $(function () {
     $('.main_slide').slick('slickGoTo', idx);
   });
 
+  //모바일 탭 버튼
+  $('.mobile_btn').on('click', function () {
+    $(this).toggleClass('on');
+    $('.gnb').toggleClass('on');
+  });
+
+  $('.gnb>ul>li>a').on('click', function (e) {
+    if ($('.gnb').hasClass('on')) {
+      e.preventDefault();
+    }
+
+    $(this).next().stop().slideDown();
+    $(this).parent().siblings().find('.sub_menu').stop().slideUp();
+  });
   $('.pro_slide').slick({
     arrows: false,
   });
