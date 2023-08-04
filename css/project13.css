@@ -191,7 +191,7 @@
 
 .main_visual .arrows {
   position: absolute;
-  left: 24.1%;
+  left: 22.5%;
   bottom: 10%;
   transform: translate(-50%, 0);
   display: flex;
@@ -206,7 +206,7 @@
 
 .main_visual .slide_num {
   position: absolute;
-  left: 25%;
+  left: 23.4%;
   bottom: 10%;
   z-index: 999;
   font-size: 16px;
